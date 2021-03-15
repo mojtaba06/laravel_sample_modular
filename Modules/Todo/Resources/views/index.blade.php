@@ -1,9 +1,17 @@
 @extends('todo::layouts.master')
 
 @section('content')
-    <h1>Hello World</h1>
+<table>
+    <tr>
+        <td>id</td>
+        <td>title</td>
+    <tr>
+        @foreach ($todos as $todo)
+    <tr>
+        <td>{{$todo->id}}</td>
+        <td>{{$todo->title}}</td>
+    </tr>
+    @endforeach
+</table>
 
-    <p>
-        This view is loaded from module: {!! config('todo.name') !!}
-    </p>
 @endsection

@@ -38,6 +38,7 @@ class TodoUIController extends Controller
     {
         $class_path = "Modules\\" . $module . "\Http\Controllers\\" . $module . "Controller";
         $controller_class = app()->make($class_path);
+
         $methods = get_class_methods($controller_class);
 
         if (!in_array("direct_callable_methods", $methods)) {

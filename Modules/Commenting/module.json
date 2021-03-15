@@ -1,0 +1,13 @@
+{
+    "name": "Commenting",
+    "alias": "commenting",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Commenting\\Providers\\CommentingServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

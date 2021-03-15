@@ -8,7 +8,8 @@ trait NavBarTrait
 {
     public function registerNavBar($module, $title, $path)
     {
-        NavBar::getInstance()->navbar_items[] = ["module" => $module, "name" => $title, "method" => $path];
+        NavBar::getInstance()->navbar_items[] =
+            ["module" => $module, "name" => $title, "method" => $path];
     }
 
     public function getNavBar()

@@ -1,26 +1,25 @@
 <?php
 
-namespace Modules\Ticketing\Providers;
+namespace Modules\Blog\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
-use Modules\Blog\Http\Traits\PluginsTrait;
-use Modules\Ticketing\Plugins\TicketingPlugin;
 use Modules\TodoUI\Http\Traits\NavBarTrait;
 
-class TicketingServiceProvider extends ServiceProvider
+class BlogServiceProvider extends ServiceProvider
 {
-    use NavBarTrait, PluginsTrait;
+
+    use NavBarTrait;
 
     /**
      * @var string $moduleName
      */
-    protected $moduleName = 'Ticketing';
+    protected $moduleName = 'Blog';
 
     /**
      * @var string $moduleNameLower
      */
-    protected $moduleNameLower = 'ticketing';
+    protected $moduleNameLower = 'blog';
 
     /**
      * Boot the application events.
@@ -33,11 +32,7 @@ class TicketingServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
-        $this->registerNavBar("Ticketing", "Ticketing", "ticketing");
-        $should_show_ticket = true;
-        if ($should_show_ticket) {
-            $this->enablePlugin((new TicketingPlugin));
-        }
+        $this->registerNavBar("Blog", "Blog Pages", "page");
     }
 
     /**

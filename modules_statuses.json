@@ -1,5 +1,7 @@
 {
     "Todo": true,
     "TodoUI": true,
-    "Ticketing": true
+    "Ticketing": true,
+    "Blog": true,
+    "Commenting": true
 }

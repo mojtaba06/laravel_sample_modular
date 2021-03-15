@@ -1,0 +1,13 @@
+{
+    "name": "TodoUI",
+    "alias": "todoui",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TodoUI\\Providers\\TodoUIServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
